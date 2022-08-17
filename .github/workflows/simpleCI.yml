@@ -1,0 +1,21 @@
+
+
+name: Simple CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  writing_secrets_to_file:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Try
+      env: 
+        TOKEN: '${{ secrets.AUTH_TOKEN }}'
+      run: |
+        echo $TOKEN
+        
+
