@@ -11,7 +11,7 @@ on:
 
 jobs:
   writing_secrets_to_file:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     # The Secrect Actions GitHub example has three steps
     steps:
       - name: ''
