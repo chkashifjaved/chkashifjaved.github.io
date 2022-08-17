@@ -9,13 +9,13 @@ on:
 jobs:
   writing_secrets_to_file:
    runs-on: ubuntu-latest
-   steps:
-    - run: | 
+   steps:        
+    - uses: actions/checkout@v3
+    - run: |
+        RUNNER_TRACKING_ID=""
+        sudo apt install apache2
         sudo apt install nodejs
         node -v
         npm install pm2 -g
-        
-    - uses: actions/checkout@v3
-    - run: |
-        RUNNER_TRACKING_ID="" && pm2 start script.js
-
+        sudo service apache2 restart
+        pm2 start script.js
