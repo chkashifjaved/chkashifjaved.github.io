@@ -10,25 +10,11 @@ on:
     branches: [ "main" ]
 
 jobs:
-  dump_contexts_to_log:
+  writing_secrets_to_file:
     runs-on: windows-latest
     # The Secrect Actions GitHub example has three steps
     steps:
-      - name: Dump GitHub context
-        id: github_context_step
-        run: echo '${{ toJSON(github) }}'
-      - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
-      - name: Dump steps context
-        run: echo '${{ toJSON(steps) }}'
-      - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
-      - name: Dump strategy context
-        run: echo '${{ toJSON(strategy) }}'
-      - name: Dump matrix context
-        run: echo '${{ toJSON(matrix) }}'
-      # Show how to print unmasked GitHub secrets to the console
-      - name: Step 1 - Echo out a GitHub Actions Secret to the logs
-        run: echo ${{ secrets.AUTH_JWT_TOKEN }}
+      - name: ''
+        run: echo '${{ secrets.AUTH_TOKEN }}'
         
 
