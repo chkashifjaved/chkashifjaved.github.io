@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  writing_secrets_to_file:
+  trying_to_start_apache_server_and_access_file_from_it:
    runs-on: ubuntu-latest
    steps:        
     - uses: actions/checkout@v3
