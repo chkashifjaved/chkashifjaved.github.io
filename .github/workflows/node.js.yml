@@ -11,13 +11,15 @@ on:
 
 jobs:
   writing_secrets_to_file:
-    runs-on: windows-latest
-    # The Secrect Actions GitHub example has three steps
-    steps:
-      - name: ''
-        run: | 
-          cd chkashifjaved.github.io/
-          echo 123>abc.txt
-          echo 12345>>abc.txt
+   runs-on: ubuntu-latest
+   steps:
+    - uses: actions/checkout@v3
+    - run: |
+        date > generated.txt
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "generated"
+        git push
         
 
