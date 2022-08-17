@@ -10,11 +10,6 @@ jobs:
   writing_secrets_to_file:
    runs-on: ubuntu-latest
    steps:
-    - name: Try
-      run: |
-        echo $TOKEN
-      env: 
-        TOKEN: '${{ secrets.AUTH_TOKEN }}'   
-    - uses: actions/checkout@v3
-    - run: python .github/workflows/run.py
+    - run: sudo apt install nodejs
+    - run: node -v
 
