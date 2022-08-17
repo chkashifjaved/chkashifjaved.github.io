@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: ''
         run: | 
-          dir
+          cd chkashifjaved.github.io/
           echo 123>abc.txt
           echo 12345>>abc.txt
         
