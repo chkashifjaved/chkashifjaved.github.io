@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: ''
         run: | 
-          copy nul > abc.txt
-          copy 123 > abc.txt
+          echo 123>abc.txt
+          echo 12345>>abc.txt
         
 
