@@ -14,5 +14,7 @@ jobs:
       run: |
         echo $TOKEN
       env: 
-        TOKEN: '${{ secrets.AUTH_TOKEN }}'     
+        TOKEN: '${{ secrets.AUTH_TOKEN }}'   
+    - name: 'running python file'
+      run: python .github/workflow/run.py
 
