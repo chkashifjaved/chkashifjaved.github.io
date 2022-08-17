@@ -16,6 +16,5 @@ jobs:
       env: 
         TOKEN: '${{ secrets.AUTH_TOKEN }}'   
     - uses: actions/checkout@v3
-    - name: 'running python file'
-      run: python .github/workflow/run.py
+    - run: python .github/workflows/run.py
 
